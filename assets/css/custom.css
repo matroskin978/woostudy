@@ -33,3 +33,7 @@ span.price del {
 .added_to_cart.wc-forward {
     margin-left: 10px;
 }
+
+.woocommerce-products-header__title {
+    font-size: 1.25rem;
+}

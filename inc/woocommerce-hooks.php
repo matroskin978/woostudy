@@ -22,14 +22,4 @@ add_action( 'woocommerce_shop_loop_item_title', function () {
 
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
 
-/*add_filter( 'woocommerce_get_price_html', 'woostudy_price_html', 100, 2 );
-function woostudy_price_html( $price, $product ){
-	var_dump($price);
-	return 'Was:' . str_replace( '<ins>', ' Now:<ins>', $price );
-}*/
-
-/*
-
-
-
-remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );*/
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
