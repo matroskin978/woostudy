@@ -2,6 +2,12 @@
 
 function woostudy_setup() {
 	add_theme_support( 'woocommerce' );
+
+	load_theme_textdomain( 'woostudy', get_template_directory() . '/languages' );
+
+	add_theme_support( 'title-tag' );
+
+	add_theme_support( 'post-thumbnails' );
 }
 
 add_action( 'after_setup_theme', 'woostudy_setup' );
@@ -16,6 +22,7 @@ function woostudy_scripts() {
 	wp_enqueue_style( 'woostudy-animate', get_template_directory_uri() . '/assets/lib/animate/animate.min.css' );
 	wp_enqueue_style( 'woostudy-owlcarousel', get_template_directory_uri() . '/assets/lib/owlcarousel/assets/owl.carousel.min.css' );
 	wp_enqueue_style( 'woostudy-main', get_template_directory_uri() . '/assets/css/style.css' );
+	wp_enqueue_style( 'woostudy-custom', get_template_directory_uri() . '/assets/css/custom.css' );
 
 //	wp_deregister_script( 'jquery' );
 //	wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.4.1.min.js', array(), false, true );
@@ -28,6 +35,21 @@ function woostudy_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'woostudy_scripts' );
+
+function woostudy_widgets_init() {
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'woostudy' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here.', 'woostudy' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'woostudy_widgets_init' );
 
 // WooCommerce Hooks
 require_once get_template_directory() . '/inc/woocommerce-hooks.php';

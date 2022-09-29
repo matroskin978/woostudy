@@ -1,0 +1,35 @@
+.product-img .attachment-woocommerce_thumbnail {
+    max-width: 100%;
+    height: auto;
+    width: 100% !important;
+}
+
+.product-img .onsale {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #ffd333;
+    color: #fff;
+    padding: 0 5px;
+}
+
+span.price,
+.price ins {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #3D464D;
+}
+span.price del {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+.add_to_cart_button.btn-outline-warning:hover {
+    color: #fff !important;
+}
+
+.added_to_cart.wc-forward {
+    margin-left: 10px;
+}
