@@ -46,6 +46,7 @@
                     <h1 class="woocommerce-products-header__title page-title section-title position-relative text-uppercase mb-3">
                         <span class="bg-secondary pr-3"><?php woocommerce_page_title(); ?></span>
                     </h1>
+                <?php woocommerce_output_all_notices(); ?>
 		        <?php endif; ?>
 
 		        <?php
@@ -64,17 +65,19 @@
         <?php
         if ( woocommerce_product_loop() ) {?>
         <div class="col-12 pb-1">
-            <?php
-	        /**
-	         * Hook: woocommerce_before_shop_loop.
-	         *
-	         * @hooked woocommerce_output_all_notices - 10
-	         * @hooked woocommerce_result_count - 20
-	         * @hooked woocommerce_catalog_ordering - 30
-	         */
-	        do_action( 'woocommerce_before_shop_loop' );
-            ?>
-        </div>
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <?php
+                /**
+                 * Hook: woocommerce_before_shop_loop.
+                 *
+                 * @hooked woocommerce_output_all_notices - 10
+                 * @hooked woocommerce_result_count - 20
+                 * @hooked woocommerce_catalog_ordering - 30
+                 */
+                do_action( 'woocommerce_before_shop_loop' );
+                ?>
+            </div><!-- ./d-flex align-items-center justify-content-between mb-4 -->
+        </div><!-- ./col-12 pb-1 -->
 	        <?php
 	        woocommerce_product_loop_start();
 
