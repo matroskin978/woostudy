@@ -1,5 +1,21 @@
 <?php get_header( 'shop' ); ?>
 
+<!-- Breadcrumb Start -->
+<!-- https://woocommerce.com/document/customise-the-woocommerce-breadcrumb/ -->
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-12">
+            <?php woocommerce_breadcrumb(); ?>
+            <!--<nav class="breadcrumb bg-light mb-30">
+                <a class="breadcrumb-item text-dark" href="#">Home</a>
+                <a class="breadcrumb-item text-dark" href="#">Shop</a>
+                <span class="breadcrumb-item active">Shop List</span>
+            </nav>-->
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+
 <!-- Shop Start -->
 <div class="container-fluid">
     <div class="row px-xl-5">

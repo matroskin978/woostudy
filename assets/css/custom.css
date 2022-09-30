@@ -37,3 +37,12 @@ span.price del {
 .woocommerce-products-header__title {
     font-size: 1.25rem;
 }
+
+nav.breadcrumb {
+    color: #6c757d;
+}
+nav.breadcrumb a {
+    color: #3D464D;
+}
+
+

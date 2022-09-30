@@ -19,4 +19,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-</div><!-- ./row products -->
+    </div><!-- ./row products -->
+</div><!-- ./col-12 -->
