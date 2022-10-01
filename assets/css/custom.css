@@ -77,3 +77,15 @@ nav.breadcrumb a {
     background-color: #e9ecef;
     border-color: #dee2e6;
 }
+
+.woostudy-sidebar h5 {
+    text-transform: uppercase;
+}
+
+.woostudy-sidebar .wc-block-price-filter .wc-block-components-price-slider__controls {
+    display: block;
+}
+
+.woostudy-sidebar .wc-block-attribute-filter label {
+    margin-left: 10px;
+}
