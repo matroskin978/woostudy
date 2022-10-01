@@ -66,6 +66,13 @@ if ( empty( $product ) || ! $product->is_visible() ) {
              * @hooked woocommerce_template_loop_rating - 5
              * @hooked woocommerce_template_loop_price - 10
              */
+            echo '<div class="woostudy-rating">';
+            woocommerce_template_loop_rating();
+            if ( $rating_cnt = $product->get_rating_count() ) {
+	            echo '<span class="woostudy-rating-count"> <small>(' . $rating_cnt . ')</small> </span>';
+            }
+
+            echo '</div>';
             do_action( 'woocommerce_after_shop_loop_item_title' );
 
             /**
