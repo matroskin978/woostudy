@@ -8,6 +8,12 @@ function woostudy_setup() {
 	add_theme_support( 'title-tag' );
 
 	add_theme_support( 'post-thumbnails' );
+
+	register_nav_menus(
+		array(
+			'menu-1' => __( 'Top Menu', 'woostudy' ),
+		)
+	);
 }
 
 add_action( 'after_setup_theme', 'woostudy_setup' );
@@ -39,13 +45,11 @@ add_action( 'wp_enqueue_scripts', 'woostudy_scripts' );
 function woostudy_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'woostudy' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'woostudy' ),
+			'name' => esc_html__( 'Sidebar', 'woostudy' ),
+			'id' => 'sidebar-1',
+			'description' => esc_html__( 'Add widgets here.', 'woostudy' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'after_widget' => '</section>',
 		)
 	);
 }
