@@ -13,6 +13,7 @@ function woostudy_setup() {
 		array(
 			'menu-1' => __( 'Top Menu', 'woostudy' ),
 			'menu-2' => __( 'Categories Menu', 'woostudy' ),
+			'menu-3' => __( 'Navbar Menu', 'woostudy' ),
 		)
 	);
 }
@@ -60,6 +61,7 @@ add_action( 'widgets_init', 'woostudy_widgets_init' );
 require_once get_template_directory() . '/inc/woocommerce-hooks.php';
 
 require_once get_template_directory() . '/inc/class-woostudy-menu-categories.php';
+require_once get_template_directory() . '/inc/class-woostudy-menu-navbar.php';
 
 function woostudy_debug( $data, $die = false ) {
 	echo '<pre>' . print_r( $data, 1 ) . '</pre>';
