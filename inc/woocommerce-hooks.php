@@ -35,3 +35,9 @@ add_filter( 'woocommerce_breadcrumb_defaults', function() {
 } );
 
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10 );
+
+remove_action( 'woocommerce_shop_loop_subcategory_title', 'woocommerce_template_loop_category_title', 10 );
+add_action( 'woocommerce_shop_loop_subcategory_title', function ( $category ) {
+	echo '<h6>' . esc_html( $category->name ) . '</h6>
+          <small class="text-body">' . $category->count . __( ' Products', 'woostudy' ) . '</small>';
+}, 10 );
