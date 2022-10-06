@@ -182,6 +182,14 @@ woostudy_debug( $cats );*/
 </div>
 <!-- Products End -->
 
+<?php
+/*$wc_query = new WP_Query( array(
+	'posts_per_page' => 5,
+	'post_type' => 'product'
+) );
+woostudy_debug($wc_query);*/
+?>
+
 
 <!-- Vendor Start -->
 <div class="container-fluid py-5">
