@@ -25,9 +25,12 @@ $product;
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
+
+// https://woocommerce.com/document/conditional-tags/?quid=4c7853389721275e4a7c4a53e34197c2
+$product_class = is_front_page() ? 'col-lg-3 col-md-4 col-sm-6 pb-1' : 'col-lg-4 col-md-6 col-sm-6 pb-1';
 ?>
 
-<div <?php wc_product_class( 'col-lg-4 col-md-6 col-sm-6 pb-1', $product ); ?>>
+<div <?php wc_product_class( $product_class, $product ); ?>>
     <div class="product-item bg-light mb-4">
         <?php
         /**
