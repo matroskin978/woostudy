@@ -41,3 +41,9 @@ add_action( 'woocommerce_shop_loop_subcategory_title', function ( $category ) {
 	echo '<h6>' . esc_html( $category->name ) . '</h6>
           <small class="text-body">' . $category->count . __( ' Products', 'woostudy' ) . '</small>';
 }, 10 );
+
+// https://woocommerce.com/document/show-cart-contents-total/
+add_filter( 'woocommerce_add_to_cart_fragments', function ($fragments) {
+	$fragments['.mini-cart-cnt'] = '<span class="badge text-dark border border-dark rounded-circle mini-cart-cnt">' . count( WC()->cart->get_cart() ) . '</span>';
+	return $fragments;
+} );

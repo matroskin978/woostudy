@@ -192,3 +192,7 @@ nav.breadcrumb a {
 .category-list a {
     text-decoration: none;
 }
+
+.mini-cart-cnt {
+    padding-bottom: 2px;
+}

@@ -114,14 +114,7 @@
 <!-- Featured End -->
 
 <!-- https://woocommerce.com/document/woocommerce-shortcodes/ -->
-<?php
-/*$cats = get_categories( array(
-	'taxonomy'   => 'product_cat',
-    'hide_empty' => false,
-) );
-woostudy_debug( $cats );*/
 
-?>
 <!-- Categories Start -->
 <div class="container-fluid pt-5">
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span
@@ -181,15 +174,6 @@ woostudy_debug( $cats );*/
     </div>
 </div>
 <!-- Products End -->
-
-<?php
-/*$wc_query = new WP_Query( array(
-	'posts_per_page' => 5,
-	'post_type' => 'product'
-) );
-woostudy_debug($wc_query);*/
-?>
-
 
 <!-- Vendor Start -->
 <div class="container-fluid py-5">
