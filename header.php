@@ -25,15 +25,9 @@
         </div>
         <div class="col-lg-6 text-center text-lg-right">
             <div class="d-inline-flex align-items-center">
-                <?php //woocommerce_mini_cart(); ?>
                 <a href="<?php echo wc_get_cart_url() ?>" class="btn px-0 ml-2">
                     <i class="fas fa-shopping-cart text-dark"></i>
-                    <span class="badge text-dark border border-dark rounded-circle mini-cart-cnt">
-                        <?php
-                        //echo WC()->cart->get_cart_contents_count();
-                        echo count( WC()->cart->get_cart() );
-                        ?>
-                    </span>
+                    <span class="badge text-dark border border-dark rounded-circle mini-cart-cnt"><?php echo count( WC()->cart->get_cart() ); ?></span>
                 </a>
             </div>
         </div>
@@ -46,7 +40,8 @@
             </a>
         </div>
         <div class="col-lg-4 col-6 text-left">
-            <form action="">
+	        <?php aws_get_search_form( true ); ?>
+            <!--<form action="">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search for products">
                     <div class="input-group-append">
@@ -55,7 +50,7 @@
                             </span>
                     </div>
                 </div>
-            </form>
+            </form>-->
         </div>
         <div class="col-lg-4 col-6 text-right">
             <p class="m-0">Customer Service</p>

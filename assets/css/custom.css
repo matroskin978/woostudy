@@ -196,3 +196,24 @@ nav.breadcrumb a {
 .mini-cart-cnt {
     padding-bottom: 2px;
 }
+
+.aws-container .aws-search-form {
+    height: 38px;
+}
+
+.aws-container .aws-search-form .aws-form-btn {
+    background: #fff;
+    border: 1px solid #ced4da;
+}
+
+.aws-container .aws-search-form .aws-form-btn:hover {
+    background: #e9ecef;
+}
+
+.aws-container .aws-search-form .aws-form-btn:hover > span {
+    color: #000;
+}
+
+.aws-container .aws-search-form .aws-search-btn_icon {
+    color: #FFD333;
+}
