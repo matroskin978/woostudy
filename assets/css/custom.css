@@ -1,4 +1,5 @@
-.product-img .attachment-woocommerce_thumbnail {
+.product-img .attachment-woocommerce_thumbnail,
+.product-img .woocommerce-placeholder {
     max-width: 100%;
     height: auto;
     width: 100% !important;
@@ -220,8 +221,32 @@ nav.breadcrumb a {
 }
 
 .woocommerce-message {
-    background-color: #cff4fc;
+    background-color: #ffd333;
     padding: 1rem;
     margin-bottom: 1rem;
-    color: #055160;
+    color: #000;
+}
+
+.woocommerce-message .button {
+    float: right;
+    color: #000;
+    text-decoration: underline;
+}
+
+.woocommerce-message .button:hover {
+    text-decoration: none;
+}
+
+h1.product_title {
+    font-size: 1.75rem;
+}
+
+.product_meta > span {
+    display: block;
+}
+
+table.variations th,
+table.variations td {
+    padding: 10px;
+    padding-left: 0;
 }
