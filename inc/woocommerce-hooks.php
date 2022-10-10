@@ -47,3 +47,13 @@ add_filter( 'woocommerce_add_to_cart_fragments', function ($fragments) {
 	$fragments['.mini-cart-cnt'] = '<span class="badge text-dark border border-dark rounded-circle mini-cart-cnt">' . count( WC()->cart->get_cart() ) . '</span>';
 	return $fragments;
 } );
+
+add_action( 'template_redirect', function () {
+	if ( is_product() ) {
+		remove_action( 'woocommerce_sidebar','woocommerce_get_sidebar', 10 );
+	}
+} );
+
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+

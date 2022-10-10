@@ -1,7 +1,11 @@
 <?php
 
 function woostudy_setup() {
+	// https://woocommerce.com/document/woocommerce-theme-developer-handbook/
 	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
 
 	load_theme_textdomain( 'woostudy', get_template_directory() . '/languages' );
 

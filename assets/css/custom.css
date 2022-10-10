@@ -4,7 +4,8 @@
     width: 100% !important;
 }
 
-.product-img .onsale {
+.product-img .onsale,
+.carousel .onsale {
     position: absolute;
     top: 0;
     right: 0;
@@ -216,4 +217,11 @@ nav.breadcrumb a {
 
 .aws-container .aws-search-form .aws-search-btn_icon {
     color: #FFD333;
+}
+
+.woocommerce-message {
+    background-color: #cff4fc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #055160;
 }
