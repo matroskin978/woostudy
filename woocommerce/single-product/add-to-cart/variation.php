@@ -11,7 +11,7 @@
  */
 
 defined( 'ABSPATH' ) || exit;
-
+// https://usersinsights.com/woocommerce-get-product-variations-programmatically/
 ?>
 <script type="text/template" id="tmpl-variation-template">
 	<div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
