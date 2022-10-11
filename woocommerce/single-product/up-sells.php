@@ -34,23 +34,26 @@ if ( $upsells ) : ?>
             </div>
 		<?php endif; ?>
 
-		<?php woocommerce_product_loop_start(); ?>
+        <div class="owl-carousel related-carousel">
 
-		<?php foreach ( $upsells as $upsell ) : ?>
+            <?php //woocommerce_product_loop_start(); ?>
 
-			<?php
-			$post_object = get_post( $upsell->get_id() );
+            <?php foreach ( $upsells as $upsell ) : ?>
 
-			setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+                <?php
+                $post_object = get_post( $upsell->get_id() );
 
-			wc_get_template_part( 'content', 'product' );
-			?>
+                setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
 
-		<?php endforeach; ?>
+                wc_get_template_part( 'content', 'product-upsells' );
+                ?>
 
-		<?php woocommerce_product_loop_end(); ?>
+            <?php endforeach; ?>
 
-    </div>
+            <?php //woocommerce_product_loop_end(); ?>
+        </div><!-- ./owl-carousel related-carousel -->
+
+    </div><!-- ./row mt-5 up-sells upsells products -->
 
 <?php
 endif;
