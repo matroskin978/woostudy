@@ -266,9 +266,9 @@ nav.breadcrumb a {
 }
 
 .woocommerce-product-gallery .flex-control-thumbs li {
-    width: 14.2857142857%;
+    width: 15%;
     float: left;
-    margin-right: 14.2857142857%;
+    margin-right: 5%;
     list-style: none;
     margin-bottom: 1.5rem;
     cursor: pointer;
@@ -325,4 +325,10 @@ table.variations td {
 
 .woocommerce-grouped-product-list td {
     min-width: 100px;
+}
+
+.nav-tabs li.active a {
+    color: #495057;
+    background-color: #F5F5F5;
+    border-color: #dee2e6 #dee2e6 #F5F5F5;
 }

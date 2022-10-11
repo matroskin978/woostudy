@@ -54,6 +54,7 @@ add_action( 'template_redirect', function () {
 	}
 } );
 
-//remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
