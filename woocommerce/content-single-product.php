@@ -30,6 +30,8 @@ global $product;
         </div><!-- ./col -->
     </div><!-- ./row product-additional -->
 
+    <?php woocommerce_upsell_display( 4 ) ?>
+
 </div><!-- #/product -->
 
 
