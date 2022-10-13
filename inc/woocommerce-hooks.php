@@ -58,3 +58,5 @@ remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_pr
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display', 10 );

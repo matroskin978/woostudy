@@ -154,40 +154,35 @@ defined( 'ABSPATH' ) || exit;
 					<?php do_action( 'woocommerce_after_cart_contents' ); ?>
                     </tbody>
                 </table>
+
+                <?php if ( wc_coupons_enabled() ): ?>
+                    <div class="bg-light p-30 mt-3 coupon">
+
+                        <div class="input-group mb-3">
+                            <input type="text" name="coupon_code" id="coupon_code" class="form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="submit" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+                            </div>
+                        </div>
+	                    <?php do_action( 'woocommerce_cart_coupon' ); ?>
+                    </div>
+                <?php endif; ?>
+
+                <div class="bg-light p-30 mt-3">
+                    <button type="submit" class="button btn btn-block btn-primary font-weight-bold my-3 py-3" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+
+                    <?php do_action( 'woocommerce_cart_actions' ); ?>
+
+                    <?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
+                </div>
+
 				<?php do_action( 'woocommerce_after_cart_table' ); ?>
             </form>
         </div>
 
         <div class="col-lg-4">
-            <form class="mb-30" action="">
-                <div class="input-group">
-                    <input type="text" class="form-control border-0 p-4" placeholder="Coupon Code">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary">Apply Coupon</button>
-                    </div>
-                </div>
-            </form>
-            <h5 class="section-title position-relative text-uppercase mb-3"><span
-                        class="bg-secondary pr-3">Cart Summary</span></h5>
-            <div class="bg-light p-30 mb-5">
-                <div class="border-bottom pb-2">
-                    <div class="d-flex justify-content-between mb-3">
-                        <h6>Subtotal</h6>
-                        <h6>$150</h6>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-medium">Shipping</h6>
-                        <h6 class="font-weight-medium">$10</h6>
-                    </div>
-                </div>
-                <div class="pt-2">
-                    <div class="d-flex justify-content-between mt-2">
-                        <h5>Total</h5>
-                        <h5>$160</h5>
-                    </div>
-                    <button class="btn btn-block btn-primary font-weight-bold my-3 py-3">Proceed To Checkout</button>
-                </div>
-            </div>
+            <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
+            <?php do_action( 'woocommerce_cart_collaterals' ); ?>
         </div>
     </div>
 </div>

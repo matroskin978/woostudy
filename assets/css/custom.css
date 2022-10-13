@@ -405,3 +405,16 @@ table.variations td {
 .product-name a {
     color: #6C757D;
 }
+
+.table-summary td {
+    text-align: right;
+}
+
+ul.woocommerce-shipping-methods {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.woocommerce-shipping-methods input {
+    margin-right: 5px;
+}
