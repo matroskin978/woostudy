@@ -244,7 +244,8 @@ nav.breadcrumb a {
     color: #000;
 }
 
-.woocommerce-message .button {
+.woocommerce-message .button,
+.woocommerce-message .restore-item {
     float: right;
     color: #000;
     text-decoration: underline;
@@ -393,4 +394,14 @@ table.variations td {
     position: absolute;
     margin-top: .3rem;
     margin-left: -1.25rem;
+}
+
+.cart-product-thumb img {
+    width: 50px;
+    max-width: 100%;
+    height: auto;
+}
+
+.product-name a {
+    color: #6C757D;
 }
