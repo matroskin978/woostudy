@@ -57,21 +57,27 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="row px-xl-5">
 
 			<?php if ( $checkout->get_checkout_fields() ) : ?>
-				<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
                 <div class="col-lg-8">
+	                <?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
                     <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3"><?php _e( 'Billing Address', 'woostudy' ); ?></span></h5>
                     <div class="bg-light p-30 mb-5">
 		                <?php do_action( 'woocommerce_checkout_billing' ); ?>
 		                <?php do_action( 'woocommerce_checkout_shipping' ); ?>
                     </div>
-
+	                <?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
                 </div><!-- ./col-lg-8 -->
-				<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+
 			<?php endif; ?>
 
             <div class="col-lg-4">
-                2
+	            <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
+                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Order Total</span></h5>
+                <div class="bg-light p-30 mb-5">
+	                <?php do_action( 'woocommerce_checkout_order_review' ); ?>
+                </div>
+	            <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
             </div><!-- ./col-lg-4 -->
+	        <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 
         </div><!-- ./row px-xl-5 -->
     </form>

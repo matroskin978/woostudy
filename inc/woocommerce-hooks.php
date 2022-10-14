@@ -67,3 +67,8 @@ add_filter( 'woocommerce_default_address_fields' , function ( $fields ) {
 	return $fields;
 } );
 
+// https://wpbeaches.com/filter-woocommerce-place-order-text-button-in-checkout-page/
+add_filter( 'woocommerce_order_button_html', function ( $button ) {
+	return str_replace( 'button alt', 'button alt btn btn-block btn-primary font-weight-bold py-3', $button );
+} );
+
