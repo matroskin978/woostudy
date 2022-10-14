@@ -46,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="row px-xl-5 mb-3">
         <div class="col-12">
-            <div class="bg-light p-30 mt-3">
+            <div class="bg-light p-30">
 	            <?php do_action( 'woocommerce_before_checkout_form', $checkout ); ?>
             </div>
         </div>
@@ -61,7 +61,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <div class="col-lg-8">
                     <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3"><?php _e( 'Billing Address', 'woostudy' ); ?></span></h5>
                     <div class="bg-light p-30 mb-5">
-                        <!-- https://woocommerce.com/document/tutorial-customising-checkout-fields-using-actions-and-filters/ -->
 		                <?php do_action( 'woocommerce_checkout_billing' ); ?>
 		                <?php do_action( 'woocommerce_checkout_shipping' ); ?>
                     </div>

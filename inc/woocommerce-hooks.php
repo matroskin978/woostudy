@@ -61,6 +61,7 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
 
 remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display', 10 );
 
+// https://woocommerce.com/document/tutorial-customising-checkout-fields-using-actions-and-filters/
 add_filter( 'woocommerce_default_address_fields' , function ( $fields ) {
 	unset( $fields['address_2'] );
 	return $fields;
