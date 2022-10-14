@@ -60,3 +60,9 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_d
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display', 10 );
+
+add_filter( 'woocommerce_default_address_fields' , function ( $fields ) {
+	unset( $fields['address_2'] );
+	return $fields;
+} );
+

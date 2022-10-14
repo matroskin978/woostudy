@@ -314,11 +314,13 @@ table.variations td {
     padding-left: 0;
 }
 
-.woocommerce-notices-wrapper ul {
+.woocommerce-notices-wrapper ul,
+.woocommerce-error {
     list-style: none;
 }
 
-.woocommerce-notices-wrapper .woocommerce-error {
+.woocommerce-notices-wrapper .woocommerce-error,
+.woocommerce-error {
     color: #fff;
     background-color: #dc3545;
     padding: 1rem;
@@ -418,3 +420,70 @@ ul.woocommerce-shipping-methods {
 ul.woocommerce-shipping-methods input {
     margin-right: 5px;
 }
+
+.product-categories > div {
+    width: 100%;
+}
+
+.woocommerce-billing-fields__field-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.woocommerce-billing-fields__field-wrapper p {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-direction: column;
+}
+
+.woocommerce-billing-fields__field-wrapper p .input-text {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.woocommerce-billing-fields__field-wrapper p .input-text:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ffefb3;
+    outline: 0;
+    box-shadow: none;
+}
+
+.woocommerce-billing-fields__field-wrapper p .select2-container--default .select2-selection--single {
+    border-radius: 0;
+}
+
+.woocommerce-billing-fields__field-wrapper p .select2-container .select2-selection--single {
+    height: 38px;
+}
+
+.woocommerce-billing-fields__field-wrapper p .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-top: 4px;
+}
+
+.woocommerce-billing-fields__field-wrapper p .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 5px;
+}
+
+@media only screen and (max-width : 768px) {
+    .woocommerce-billing-fields__field-wrapper p {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
